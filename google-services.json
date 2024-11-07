@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "349317797181",
+    "firebase_url": "https://questionario-b3529-default-rtdb.firebaseio.com",
+    "project_id": "questionario-b3529",
+    "storage_bucket": "questionario-b3529.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349317797181:android:e41dd305966b03ac6be154",
+        "android_client_info": {
+          "package_name": "com.questionario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjaw5KozD0stP5j0GrDwk5tem-ZSNa51E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
