@@ -55,10 +55,6 @@ export const Questions = () => {
     });
   };
 
-  if (index >= questions.length) {
-    return null;
-  }
-
   return (
     <ImageBackground
       source={require('./../../assets/bg-top.png')}

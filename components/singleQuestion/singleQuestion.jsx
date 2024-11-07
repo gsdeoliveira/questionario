@@ -5,7 +5,7 @@ import { styles } from './styles';
 export const SingleQuestion = ({ question, index, setIndex }) => {
   
   if(!question) {
-    return <Text>Carregando...</Text>
+    return <Text style={{color: 'white'}}>Carregando...</Text>
   }
 
   return (
