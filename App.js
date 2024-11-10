@@ -6,7 +6,7 @@ import { Home } from './pages/home/home';
 import { Questions } from './components/questions/questions';
 import { Login } from './pages/login/Login';
 
-// Criar o Stack Navigator
+// Criar o Stack Navigator change
 const Stack = createStackNavigator();
 
 export default function App() {

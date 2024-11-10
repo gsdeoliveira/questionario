@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "dispositivo-testes",
-    "slug": "snack-8154921d-14f8-4cb3-92bb-d9330e404e50",
+    "slug": "questionario",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "6734d753-816f-4bd9-afd9-1958952afa4f"
+      }
+    },
+    "owner": "gsdeoliveira"
   }
 }
