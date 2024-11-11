@@ -5,16 +5,16 @@ import user from '../../assets/user.png';
 import { styles } from './styles';
 import useQuestionario from '../../hooks/questionario';
 import useAuth from '../../hooks/auth';
-export const Login = ({navigation}) => {
+export const Register = ({navigation}) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { signin } = useAuth();
+  const { register } = useAuth();
 
-  const handleLogin = async () => {
+  const handleRegister = async () => {
     console.log("chamado")
       try {
-        const user = await signin({ email, password })
+        const user = await register({ email, password })
         console.log(user)
         if (user) navigation('tab')
       } catch (error) {
@@ -31,7 +31,7 @@ export const Login = ({navigation}) => {
       <View style={styles.loginContainer}>
         <View style={styles.flexCol}>
           <Image source={user} style={styles.image} />
-          <Text style={styles.text}>Login</Text>
+          <Text style={styles.text}>Register</Text>
         </View>
         <View style={styles.formContainer}>
           <TextInput placeholder="Email" style={styles.input} value={email}
@@ -42,9 +42,9 @@ export const Login = ({navigation}) => {
         secureTextEntry />
         </View>
         <View style={styles.button}>
-          <Button title="Entrar" onPress={handleLogin} />
+          <Button title="Cadastrar" onPress={handleRegister} />
           <Text style={styles.cadastrar}>
-            Não possui uma conta? <Text onPress={() => navigation.navigate('Register')} style={{textDecoration: 'underline'}}>cadastre-se</Text>
+            Já possui uma conta? <Text onPress={() => navigation.navigate('Login')} style={{textDecoration: 'underline'}}>entrar</Text>
           </Text>
         </View>
       </View>

@@ -5,8 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Home } from './pages/home/home';
 import { Questions } from './components/questions/questions';
 import { Login } from './pages/login/Login';
+import { Register } from './pages/register/Register';
 
-// Criar o Stack Navigator change
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -15,11 +15,10 @@ export default function App() {
       <Stack.Navigator
         initialRouteName="Login"
         screenOptions={{
-          // Aqui podemos customizar a animação
           cardStyleInterpolator: ({ current, next, layouts }) => {
             const translateX = current.progress.interpolate({
               inputRange: [0, 1],
-              outputRange: [layouts.screen.width, 0], // Efeito de deslizar para a esquerda
+              outputRange: [layouts.screen.width, 0],
             });
 
             return {
@@ -33,6 +32,7 @@ export default function App() {
         <Stack.Screen name="Página Inicial" component={Home} />
         <Stack.Screen name="Perguntas" component={Questions} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );
