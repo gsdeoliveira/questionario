@@ -31,7 +31,7 @@ export const Register = ({navigation}) => {
       <View style={styles.loginContainer}>
         <View style={styles.flexCol}>
           <Image source={user} style={styles.image} />
-          <Text style={styles.text}>Register</Text>
+          <Text style={styles.text}>Cadastre-se</Text>
         </View>
         <View style={styles.formContainer}>
           <TextInput placeholder="Email" style={styles.input} value={email}

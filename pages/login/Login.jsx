@@ -24,14 +24,14 @@ export const Login = ({navigation}) => {
 
   return (
     <ImageBackground
-      source={require('./../../assets/bg-top.png')} 
+      source={require('./../../assets/bg.png')} 
       style={styles.homeContainer}  
       resizeMode="cover"  
     >
       <View style={styles.loginContainer}>
         <View style={styles.flexCol}>
           <Image source={user} style={styles.image} />
-          <Text style={styles.text}>Login</Text>
+          <Text style={styles.text}>Entrar</Text>
         </View>
         <View style={styles.formContainer}>
           <TextInput placeholder="Email" style={styles.input} value={email}

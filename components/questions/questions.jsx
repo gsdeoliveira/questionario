@@ -4,8 +4,9 @@ import { questions } from '../../data/questions';
 import { SingleQuestion } from '../singleQuestion/singleQuestion';
 import { styles } from './styles';
 import useQuestionario from '../../hooks/questionario';
+import { Resultado } from '../../pages/resultado/resultado';
 
-export const Questions = () => {
+export const Questions = ({navigation}) => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const slideAnim = useRef(new Animated.Value(0)).current;
@@ -61,6 +62,9 @@ export const Questions = () => {
       style={styles.homeContainer}
       resizeMode="cover"
     >
+      {index === data.length ? (
+        <Resultado navigation={navigation} />
+      ) : (
       <View style={styles.questionContainer}>
         <Animated.View style={{ transform: [{ translateX: slideAnim }] }}>
           <SingleQuestion
@@ -70,6 +74,7 @@ export const Questions = () => {
           />
         </Animated.View>
       </View>
+      )}
     </ImageBackground>
   );
 };
