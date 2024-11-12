@@ -38,13 +38,23 @@ const useAuth = () => {
       if (displayName) {
         await updateProfile(userCredential.user, { displayName });
       }
-      //navigate('Página Inicial', { user: userCredential.user });
     } catch (error) {
-      Toast.show({
-        type: 'error',
-        text1: 'Falha ao fazer login',
-        visibilityTime: 3000,
-      });
+      if(error.code === 'auth/weak-password') {
+        Toast.show({
+          type: 'error',
+          text1: 'Senha muito fraca!',
+          visibilityTime: 3000,
+        });
+      }
+
+      if(error.code === 'auth/email-already-in-use') {
+        Toast.show({
+          type: 'error',
+          text1: 'Já existe um usuário com este email!',
+          visibilityTime: 3000,
+        });
+      }
+      console.log(error.code)
       if (error.code === 'auth/email-already-in-use') {
         throw new Error('Este e-mail já está em uso.');
       } else if (error.code === 'auth/weak-password') {

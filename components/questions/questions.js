@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View, Text, ImageBackground, Animated } from 'react-native';
 import { questions } from '../../data/questions';
 import { SingleQuestion } from '../singleQuestion/singleQuestion';
@@ -16,6 +17,8 @@ export const Questions = ({navigation}) => {
 	const { getData } = useQuestionario()
 
   useEffect(() => {
+    AsyncStorage.clear();;
+    console.log("local storage limpo")
     const fetchData = async () => {
       setLoading(true);
       try {
@@ -59,7 +62,7 @@ export const Questions = ({navigation}) => {
 
   return (
     <ImageBackground
-      source={require('./../../assets/bg-top.png')}
+      source={require('./../../assets/bg.png')}
       style={styles.homeContainer}
       resizeMode="cover"
     >

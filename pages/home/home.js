@@ -5,7 +5,7 @@ import { styles } from './styles';
 export const Home = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require('./../../assets/bg-top.png')} 
+      source={require('./../../assets/bg.png')} 
       style={styles.homeContainer}  
       resizeMode="cover"  
     >
