@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Toast from 'react-native-toast-message';
 import * as SQLite from 'expo-sqlite';
 import { View, Image, Text, TextInput, Button, ImageBackground, Alert } from 'react-native';
 import user from '../../assets/user.png'; 
@@ -12,11 +13,17 @@ export const Login = ({navigation}) => {
   const { signin } = useAuth();
 
   const handleLogin = async () => {
-    console.log("chamado")
       try {
         const user = await signin({ email, password })
         console.log(user)
-        if (user) navigation('tab')
+        if (user) {
+          Toast.show({
+            type: 'success',
+            text1: 'Login bem-sucedido',
+            visibilityTime: 3000,
+          });
+          navigation.navigate('Página Inicial', { user });
+        }
       } catch (error) {
         Alert.alert('Erro', error.message)
       }

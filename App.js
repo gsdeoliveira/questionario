@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Toast from 'react-native-toast-message';
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -13,7 +14,6 @@ import { Loading } from './components/loading/loading';
 const Stack = createStackNavigator();
 
 export default function App() {
-  // Defina o estado do nome do usuário
   const [username, setUsername] = useState('Usuário');
 
   return (
@@ -21,7 +21,7 @@ export default function App() {
       <View style={{ flex: 1 }}>
         
         <Stack.Navigator
-          initialRouteName="Página Inicial"
+          initialRouteName="Login"
           screenOptions={{
             headerShown: false,
           }}
@@ -35,6 +35,7 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />
         </Stack.Navigator>
+        <Toast />
       </View>
     </NavigationContainer>
   );
