@@ -28,7 +28,6 @@ const useAuth = () => {
         });
       }
       console.log("error: -- " + error.code)
-      throw new Error('Erro ao tentar autenticar.');
     }
   };
 
@@ -55,13 +54,6 @@ const useAuth = () => {
         });
       }
       console.log(error.code)
-      if (error.code === 'auth/email-already-in-use') {
-        throw new Error('Este e-mail já está em uso.');
-      } else if (error.code === 'auth/weak-password') {
-        throw new Error('A senha é muito fraca. Utilize uma senha mais forte.');
-      } else {
-        throw new Error('Erro ao tentar registrar o usuário.');
-      }
     }
   };
 

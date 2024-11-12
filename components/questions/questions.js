@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View, Text, ImageBackground, Animated } from 'react-native';
-import { questions } from '../../data/questions';
 import { SingleQuestion } from '../singleQuestion/singleQuestion';
 import { styles } from './styles';
 import useQuestionario from '../../hooks/questionario';

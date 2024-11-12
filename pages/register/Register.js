@@ -34,10 +34,10 @@ export const Register = ({navigation}) => {
           <Text style={styles.text}>Cadastre-se</Text>
         </View>
         <View style={styles.formContainer}>
-          <TextInput placeholder="Email" style={styles.input} value={email}
+          <TextInput placeholder="Email" placeholderTextColor='white' style={styles.input} value={email}
         onChangeText={setEmail}
         keyboardType="email-address" />
-          <TextInput placeholder="Senha" style={styles.input} value={password}
+          <TextInput placeholder="Senha" placeholderTextColor='white' style={styles.input} value={password}
         onChangeText={setPassword}
         secureTextEntry />
         </View>

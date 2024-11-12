@@ -23,10 +23,10 @@ export const Resultado = ({ route, navigation }) => {
   }, [])
   
   const interpretScore = (score) => {
-    if (score <= 7) return 'Normal';
-    if (score <= 10) return 'Leve';
-    if (score <= 14) return 'Moderado';
-    return 'Grave';
+    if (score <= 7) return 'Improvável';
+    if (score <= 11) return 'Possível';
+    if (score <= 21) return 'Provável';
+    return 'Provável';
   };
 
 
@@ -34,9 +34,9 @@ export const Resultado = ({ route, navigation }) => {
   const depressionLevel = interpretScore(depressao);
 
   const getRecommendation = () => {
-    if (anxietyLevel === 'Grave' || depressionLevel === 'Grave') {
+    if (anxietyLevel === 'Provável' || depressionLevel === 'Provável') {
       return 'Recomendamos que você procure um profissional de saúde mental para discutir esses resultados.';
-    } else if (anxietyLevel === 'Moderado' || depressionLevel === 'Moderado') {
+    } else if (anxietyLevel === 'Possível' || depressionLevel === 'Possível') {
       return 'Você pode estar enfrentando desafios emocionais moderados. Considere buscar apoio de amigos, familiares ou profissionais.';
     } else {
       return 'Seus resultados estão dentro da normalidade, mas é sempre bom cuidar da saúde mental!';
@@ -54,7 +54,7 @@ export const Resultado = ({ route, navigation }) => {
 
       <Text style={styles.recommendation}>{getRecommendation()}</Text>
 
-      <View style={styles.buttonContainer}>
+      <View style={{paddingLeft: 20, paddingRight: 20}}>
         <Button title="Página Inicial" onPress={() => navigation.navigate('Página Inicial')} />
       </View>
     </View>

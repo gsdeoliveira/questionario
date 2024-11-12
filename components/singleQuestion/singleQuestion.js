@@ -52,8 +52,9 @@ export const SingleQuestion = ({ question, index, setIndex }) => {
           <Text style={styles.title}>{question.pergunta}</Text>
         </View>
         {question.opcoes.map((answer, idx) => (
-          <View key={idx} style={styles.button}>
+          <View key={idx} style={{margin: 5}}>
             <Button
+              style={{width: '100%'}}
               title={answer.texto}
               onPress={() => handleNextQuestion(answer.valor)}
             />
