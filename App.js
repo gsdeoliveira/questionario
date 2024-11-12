@@ -8,6 +8,7 @@ import { Login } from './pages/login/Login';
 import { Register } from './pages/register/Register';
 import { Navbar } from './components/navbar/navbar';
 import { Resultado } from './pages/resultado/resultado';
+import { Loading } from './components/loading/loading';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +21,7 @@ export default function App() {
       <View style={{ flex: 1 }}>
         
         <Stack.Navigator
-          initialRouteName="Login"
+          initialRouteName="Página Inicial"
           screenOptions={{
             headerShown: false,
           }}
@@ -29,6 +30,7 @@ export default function App() {
             {(props) => <Home {...props} setUsername={setUsername} />}
           </Stack.Screen>
           <Stack.Screen name="Perguntas" component={Questions} />
+          <Stack.Screen name="Loading" component={Loading} />
           <Stack.Screen name="Resultado" component={Resultado} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />

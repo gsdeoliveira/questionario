@@ -5,6 +5,7 @@ import { SingleQuestion } from '../singleQuestion/singleQuestion';
 import { styles } from './styles';
 import useQuestionario from '../../hooks/questionario';
 import { Resultado } from '../../pages/resultado/resultado';
+import { Loading } from '../loading/loading';
 
 export const Questions = ({navigation}) => {
   const [index, setIndex] = useState(0);
@@ -41,7 +42,7 @@ export const Questions = ({navigation}) => {
 
   if(loading) {
     return (
-      <Text>Loading...</Text>
+      <Loading />
     )
   }
 

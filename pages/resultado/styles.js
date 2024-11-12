@@ -25,6 +25,15 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
+  texto: {
+    backgroundColor: '#4b4b4b',
+    borderRadius: 5,
+    color: 'white',
+    padding: 10,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+
   scoreContainer: {
     marginBottom: 20,
   },
@@ -34,7 +43,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   recommendation: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#555',
     paddingLeft: 20,
     paddingRight: 20,

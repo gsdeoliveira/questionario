@@ -25,11 +25,11 @@ export const Resultado = ({ route, navigation }) => {
 
   return (
     <View style={styles.homeContainer}>
-      <Text style={styles.title}>Resultados do Questionário HAD</Text>
+      <Text style={styles.title}>Resultados</Text>
       
       <View style={styles.scoreContainer}>
-        <Text style={styles.scoreText}>Ansiedade: {7} ({anxietyLevel})</Text>
-        <Text style={styles.scoreText}>Depressão: {14} ({depressionLevel})</Text>
+        <Text style={{color: 'white', backgroundColor: '#4b4b4b', borderRadius: 5, padding: 10, marginLeft: 20, marginRight: 10}}>Ansiedade: {7} de 21 ({anxietyLevel})</Text>
+        <Text style={{color: 'white', backgroundColor: '#4b4b4b', borderRadius: 5, padding: 10, marginLeft: 20, marginRight: 10, marginTop: 10}}>Depressão: {14} de 21 ({depressionLevel})</Text>
       </View>
 
       <Text style={styles.recommendation}>{getRecommendation()}</Text>
