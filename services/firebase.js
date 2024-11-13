@@ -4,13 +4,13 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-	apiKey: process.env.EXPO_PUBLIC_apiKey,
-	authDomain: process.env.EXPO_PUBLIC_authDomain,
-	databaseURL: process.env.EXPO_PUBLIC_databaseURL,
-	projectId: process.env.EXPO_PUBLIC_projectId,
-	storageBucket: process.env.EXPO_PUBLIC_storageBucket,
-	messagingSenderId: process.env.EXPO_PUBLIC_messagingSenderId,
-	appId: process.env.EXPO_PUBLIC_appId,
+	apiKey: "AIzaSyCFeNgW95QHo-nQCtoTG6bvGOzhgC6DPaA",
+	authDomain: "questionario-b3529.firebaseapp.com",
+	databaseURL: "https://questionario-b3529-default-rtdb.firebaseio.com",
+	projectId: "questionario-b3529",
+	storageBucket: "questionario-b3529.firebasestorage.app",
+	messagingSenderId: "349317797181",
+	appId: "1:349317797181:web:a2a3e7930ed42f846be154",
 }
 
 const app = initializeApp(firebaseConfig);
