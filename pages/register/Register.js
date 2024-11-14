@@ -17,6 +17,7 @@ export const Register = ({navigation}) => {
       try {
         const user = await register({ email, password })
         console.log(user)
+
         if (user) {
           Toast.show({
             type: 'success',
@@ -25,6 +26,7 @@ export const Register = ({navigation}) => {
           });
           navigation.navigate("Página Inicial")
         }
+
       } catch (error) {
         Alert.alert('Erro', error.message)
       }

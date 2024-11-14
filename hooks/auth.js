@@ -35,6 +35,7 @@ const useAuth = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       return userCredential.user; // teste
+
       if (displayName) {
         await updateProfile(userCredential.user, { displayName });
       }
