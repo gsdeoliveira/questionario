@@ -34,7 +34,7 @@ const useAuth = () => {
   const register = async ({ email, password, displayName }) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      return userCredential.user;
+      return userCredential.user; // teste
       if (displayName) {
         await updateProfile(userCredential.user, { displayName });
       }
